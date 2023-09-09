@@ -1,6 +1,6 @@
-import config from './config/index'
 import express from 'express'
-import loaders from './loaders/index'
+import config from 'src/config/index'
+import loaders from 'src/loaders/index'
 
 async function startServer(): Promise<void> {
   const app = express()

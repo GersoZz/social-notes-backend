@@ -1,6 +1,6 @@
+import type { Express } from 'express'
 import expressLoader from './express'
 import mongooseLoader from './mongoose'
-import type { Express } from 'express'
 
 export default async (expressApp: Express): Promise<void> => {
   await mongooseLoader().then(() => {
