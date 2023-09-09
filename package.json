@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules ./src/app.ts",
-    "start": "ts-node tsconfig-paths/register ./src/app.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules --files ./src/app.ts",
+    "start": "ts-node -r tsconfig-paths/register --files ./src/app.ts",
     "prepare": "husky install"
   },
   "keywords": [],
