@@ -15,7 +15,7 @@ const userSchema = new Schema(
 const noteSchema = new Schema<INote>(
   {
     title: { type: String, required: true },
-    description: { type: String, required: true },
+    description: { type: String },
     date: { type: Date, default: Date.now },
     user: { type: userSchema }
   },
