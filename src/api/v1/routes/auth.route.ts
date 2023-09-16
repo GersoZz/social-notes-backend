@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { signUp, signIn, logOut } from 'src/features/auth/auth.controller'
-import { verifyToken } from '../middlewares/verifyToken'
+import { signUp, signIn, logOut, verifyToken } from 'src/features/auth/auth.controller'
+import { verifyToken as verifyTokenMiddl } from '../middlewares/verifyToken'
 import { validateSchema } from '../middlewares/validator'
 import { signUpSchema, signInSchema } from '../schemas/auth.schema'
 
@@ -13,5 +13,7 @@ export default (app: Router): void => {
 
   route.post('/signin', validateSchema(signInSchema), signIn)
 
-  route.post('/logout', verifyToken, logOut)
+  route.post('/verify', verifyToken)
+
+  route.post('/logout', verifyTokenMiddl, logOut)
 }

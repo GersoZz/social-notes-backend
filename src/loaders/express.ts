@@ -7,7 +7,12 @@ import routes from 'src/api/index'
 import config from 'src/config/index'
 
 export default async (app: Express): Promise<express.Express> => {
-  app.use(cors())
+  app.use(
+    cors({
+      credentials: true,
+      origin: 'http://localhost:5173'
+    })
+  )
   app.use(morgan('dev'))
   app.use(cookieParser())
 

@@ -81,3 +81,20 @@ export const signIn = async ({ email, password }: userSignIn): Promise<any> => {
     }
   }
 }
+
+export const findUserById = async (id: string): Promise<any> => {
+  const userFound = await UserModel.findById(id)
+
+  if (!userFound)
+    throw {
+      status: 400,
+      success: false,
+      message: 'The id does not exist'
+    }
+
+  return {
+    id: userFound._id,
+    username: userFound.username,
+    email: userFound.email
+  }
+}
