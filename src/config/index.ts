@@ -4,6 +4,7 @@ dotenv.config()
 export default {
   port: process.env.PORT,
   databaseURL: process.env.DATABASE_URI,
+  frontendURL: process.env.FRONTEND_URL,
   api: {
     prefix: '/api'
   },

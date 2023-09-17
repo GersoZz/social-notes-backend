@@ -10,7 +10,7 @@ export default async (app: Express): Promise<express.Express> => {
   app.use(
     cors({
       credentials: true,
-      origin: 'http://localhost:5173'
+      origin: config.frontendURL
     })
   )
   app.use(morgan('dev'))
