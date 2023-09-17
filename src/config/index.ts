@@ -8,5 +8,6 @@ export default {
   api: {
     prefix: '/api'
   },
-  secretToken: process.env.TOKEN_SECRET ?? 'secret_token_default'
+  secretToken: process.env.TOKEN_SECRET ?? 'secret_token_default',
+  env: process.env.NODE_ENV
 }

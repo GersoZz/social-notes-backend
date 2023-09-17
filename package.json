@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules --files ./src/app.ts",
-    "start": "ts-node -r tsconfig-paths/register --files ./src/app.ts",
+    "dev": "cross-env NODE_ENV=development ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules --files ./src/app.ts",
+    "start": "cross-env NODE_ENV=production ts-node -r tsconfig-paths/register --files ./src/app.ts",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -37,6 +37,7 @@
     "bcryptjs": "2.4.3",
     "cookie-parser": "1.4.6",
     "cors": "2.8.5",
+    "cross-env": "7.0.3",
     "dotenv": "16.3.1",
     "express": "4.18.2",
     "jsonwebtoken": "9.0.2",
